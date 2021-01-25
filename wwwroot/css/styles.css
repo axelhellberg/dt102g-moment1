@@ -1,0 +1,274 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 1rem 0 .5rem 0;
+}
+
+.main-column { /*29rem*/
+    padding: 2rem;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    max-width: 1296px;
+    background-color: #eeeeee;
+}
+
+.main-column .flexible-row {
+    display: flex;
+    flex-direction: row;
+    min-height: 528px;
+    
+}
+
+header {
+    margin: 0 auto;
+    max-width: 1296px;
+    padding: 2rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    /*background-color: #bbbbbb;*/
+    background-color: #eeeeee;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+
+header .logo {
+    padding: 3rem 0;
+    width: 272px;
+    color: #0076CD;
+    background-color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+/*header .logo:hover {
+    background-color: #00439A;
+}*/
+
+header .date {
+    padding: 1rem;
+    background-color: #ffffff;
+    align-self: end;
+    text-align: center;
+}
+
+nav {
+    padding: 2rem 1rem;
+    margin-right: 2rem;
+    background-color: #ffffff;
+}
+
+nav ul {
+    list-style: none;
+    max-height: 300px;
+    transition: max-height .5s;
+    overflow: hidden;
+}
+
+nav ul li {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+nav ul li a {
+    font-size:1.125rem;
+    padding: 1rem;
+    display: block;
+    width: 240px;
+    text-decoration: none;
+    background-color: #0076CD;
+    color: #ffffff;
+}
+
+nav ul li a:hover {
+    background-color: #00439A;
+}
+
+main {
+    padding: 2rem;
+    background-color: #ffffff;
+    width: 928px;
+}
+
+main p {
+    margin: 1rem 0;
+    max-width: 550px;
+    line-height: 1.4;
+}
+
+ul.courses {
+    margin-left: 2rem;
+    line-height: 1.4;
+}
+
+footer {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+/*menu button*/
+.menu-btn-wrap {
+    background-color: #0076CD;
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu-btn-wrap label {
+    font-size: 1.33rem;
+    color: #fff;
+    margin: 1rem;
+    margin-left: 1.67rem;
+    height: 28px;
+    cursor: pointer;
+}
+
+.menu-btn-wrap #menu-btn {
+    margin: 1rem;
+    width: 32px;
+    height: 28px;
+    position: relative;
+}
+
+.menu-btn-wrap #menu-btn #menu-toggle {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    top: 0;
+    position: absolute;
+    height: 28px;
+    width: 32px;
+}
+
+.menu-btn-wrap #menu-btn #menu-toggle:focus {
+    border: 1px solid #000;
+}
+
+.menu-btn-wrap #menu-btn span {
+    z-index: 2;
+    pointer-events: none;
+    top: 0;
+    position: absolute;
+    height: 4px;
+    width: 32px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all .2s ease-out;
+}
+
+.menu-btn-wrap #menu-btn span:nth-child(2) {
+    top: 12px;
+}
+
+.menu-btn-wrap #menu-btn span:nth-child(3) {
+    top: 24px;
+}
+
+.menu-btn-wrap #menu-btn.close span:nth-child(1) {
+    top: 12px;
+}
+
+.menu-btn-wrap #menu-btn.close span:nth-child(2) {
+    visibility: hidden;
+}
+
+.menu-btn-wrap #menu-btn.close span:nth-child(3) {
+    top: 12px;
+}
+
+.menu-btn-wrap #menu-btn.rotate span {
+    background-color: #fff;
+}
+
+.menu-btn-wrap #menu-btn.rotate span:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.menu-btn-wrap #menu-btn.rotate span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+    .main-column {
+        padding: 1rem;
+    }
+    
+    .main-column .flexible-row {
+        flex-direction: column;
+    }
+
+    nav {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    /*nav.hidden {
+        padding: 0;
+    }*/
+
+    nav.hidden ul {
+        max-height: 0;
+    }
+
+    nav.hidden ul li a {
+        user-select: none;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    nav ul li a {
+        width: 100%;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    header .logo {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    header .date {
+        width: 100%;
+    }
+
+    footer {
+        margin-top: 1rem;
+    }
+
+    .menu-btn-wrap {
+        display: flex;
+    }
+}
+
+
+

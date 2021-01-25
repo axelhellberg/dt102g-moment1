@@ -1,0 +1,34 @@
+﻿@page
+@model moment1_2.Pages.Shared.RazorModel
+@{
+    ViewData["Title"] = "Razor";
+
+    DateTime Today = DateTime.Now;
+
+    string[] Course = { "DT057G, Webbutveckling I", "DT084G, Introduktion till programmering i JavaScript", 
+        "DT003G, Databaser", "GD008G, Typografi och form för webb", "DT163G, Digital bildbehandling för webb", 
+        "DT093G, Webbutveckling II", "DT162G, JavaScriptbaserad webbutveckling", "DT152G, Webbdesign för CMS", 
+        "DT173G, Webbutveckling III", "IK060G, Projektledning", "DT068G, Webbanvändbarhet", 
+        "DT071G, Programmering i C#.NET" 
+    };
+}
+
+<h1>Razor</h1>
+
+<h2>Information</h2>
+
+<p>Datum/klockslag: @DateTime.Now</p>
+
+<p>
+    Idag är det
+    @if (Today.DayOfWeek == DayOfWeek.Monday) Write("måndag!"); else Write("inte måndag.");
+</p>
+
+<h2>Kurser jag läst</h2>
+
+<ul class="courses">
+    @for (int i=0; i<Course.Length; i++)
+    {
+        <li>@Course[i]</li>
+    }
+</ul>
